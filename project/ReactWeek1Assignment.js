@@ -14,7 +14,10 @@ class Bootcamp {
   }
 
   registerStudent(newStudent) {
-    if (this.students.find(//your code here)) {
+    if (this.students.find((student) => student.email === newStudent.email)) {
+      console.log(
+        `Sorry, ${newStudent.name} is already registered for ${this.name}`
+      );
     } else {
       this.students.push(newStudent);
     }
